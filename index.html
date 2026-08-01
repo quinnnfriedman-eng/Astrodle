@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>Astrodle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header>
+      <h1>🚀 Astrodle</h1>
+      <p class="tag">Guess the astronaut in 6 tries.</p>
+    </header>
+
+    <nav class="modes" aria-label="Game mode">
+      <button class="mode-button active" data-mode="daily">📅 Daily</button>
+      <button class="mode-button" data-mode="random">🎲 Random</button>
+      <button class="mode-button" data-mode="practice">🧑‍🚀 Practice</button>
+    </nav>
+
+    <p id="mode-description" class="mode-description">
+      Everyone gets the same astronaut today.
+    </p>
+
+    <section class="controls" aria-label="Make a guess">
+      <div class="search-wrap">
+        <input
+          id="guess"
+          type="text"
+          placeholder="Type an astronaut..."
+          autocomplete="off"
+          autocapitalize="words"
+          aria-autocomplete="list"
+          aria-controls="suggestions"
+          aria-expanded="false"
+        >
+        <div id="suggestions" class="suggestions" role="listbox"></div>
+      </div>
+      <button id="guess-button" type="button">Guess</button>
+    </section>
+
+    <p id="status" class="status">Loading the astronaut database…</p>
+
+    <div class="board-wrap">
+      <table id="board">
+        <thead>
+          <tr>
+            <th>Astronaut</th>
+            <th>Nationality</th>
+            <th>Gender</th>
+            <th>First Flight</th>
+            <th>Missions</th>
+            <th>Agency</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <section id="result-panel" class="result-panel hidden">
+      <h2 id="result-title"></h2>
+      <p id="result-text"></p>
+      <button id="next-button" type="button" class="hidden">Next astronaut</button>
+      <button id="new-random-button" type="button" class="hidden">New random game</button>
+    </section>
+
+    <p class="credit">
+      Astronaut records load from Jonathan McDowell’s Human Spaceflight database.
+    </p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
