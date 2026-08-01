@@ -1,0 +1,12 @@
+
+body{font-family:system-ui,sans-serif;background:#0b1020;color:white;max-width:1000px;margin:auto;padding:24px}
+h1{text-align:center}
+.tag{text-align:center;color:#bbb}
+.controls{display:flex;gap:10px;justify-content:center;margin:20px 0}
+input{padding:10px;width:300px}
+button{padding:10px 16px;cursor:pointer}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #333;padding:10px;text-align:center}
+.green{background:#2e7d32}
+.red{background:#8b1e1e}
+.arrow{font-weight:bold}

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Astrodle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>🚀 Astrodle</h1>
+<p class="tag">Guess the astronaut in 6 tries.</p>
+
+<div class="controls">
+<input id="guess" list="names" placeholder="Type an astronaut...">
+<datalist id="names"></datalist>
+<button onclick="submitGuess()">Guess</button>
+</div>
+
+<table id="board">
+<thead>
+<tr>
+<th>Astronaut</th><th>Nationality</th><th>Gender</th><th>First Flight</th><th>Missions</th><th>Agency</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<script src="app.js"></script>
+</body>
+</html>
