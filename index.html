@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>Astrodle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="game">
+  <header>
+    <h1>🚀 Astrodle</h1>
+    <p>Guess the astronaut in six tries.</p>
+  </header>
+
+  <nav class="modes">
+    <button class="mode active" data-mode="daily">📅 Daily</button>
+    <button class="mode" data-mode="random">🎲 Random</button>
+    <button class="mode" data-mode="practice">🧑‍🚀 Practice</button>
+  </nav>
+  <p id="modeText">Everyone gets the same astronaut today.</p>
+
+  <section class="controls">
+    <div class="search">
+      <input id="guess" autocomplete="off" placeholder="Type an astronaut..." disabled>
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+    <button id="guessButton" disabled>Guess</button>
+  </section>
+
+  <p id="status">Loading local astronaut database…</p>
+
+  <div class="tableWrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Astronaut</th><th>Nationality</th><th>Gender</th>
+          <th>First Flight</th><th>Missions</th><th>Agency</th>
+        </tr>
+      </thead>
+      <tbody id="board"></tbody>
+    </table>
+  </div>
+
+  <section id="result" class="result hidden">
+    <h2 id="resultTitle"></h2>
+    <p id="resultText"></p>
+    <button id="nextButton" class="hidden">Next astronaut</button>
+    <button id="randomButton" class="hidden">New random game</button>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

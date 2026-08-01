@@ -1,27 +1,23 @@
 # 🚀 Astrodle
 
-Astrodle is a daily astronaut guessing game inspired by Spotle.
+A Spotle-style astronaut guessing game.
 
-## Features
+## Upload
+Upload **all of these items** to the root of the GitHub repository:
 
-- 👨‍🚀 Guess from every astronaut who has flown to space
-- 📅 Daily Mode (same astronaut for everyone)
-- 🎲 Random Mode (new astronaut every refresh)
-- 🧑‍🚀 Practice Mode (unlimited games)
-- 🔍 Spotle-style autocomplete search
-- 🌎 Compare nationality
-- 👤 Compare gender
-- 🚀 Compare first spaceflight year
-- 🛰️ Compare number of missions
-- 🏛️ Compare space agency
-- 📱 Mobile friendly
+- `index.html`
+- `style.css`
+- `app.js`
+- `astronauts.json`
+- `update_astronauts.py`
+- the `.github/workflows/update-astronauts.yml` folder and file
 
-## Data
+The included local JSON loads immediately, so the site does not depend on a browser request to another website.
 
-Astronaut data is loaded from Jonathan McDowell's Human Spaceflight Database, so the game stays current as new astronauts fly.
+## Modes
+- Daily: same astronaut each UTC day
+- Random: new astronaut on refresh
+- Practice: unlimited rounds
 
-## Play
-
-Type an astronaut's name, choose from the suggestions, and try to identify the mystery astronaut in six guesses!
-
-Built with HTML, CSS, and JavaScript.
+## Updating the full current list
+Open the repository's **Actions** tab, choose **Update astronaut database**, and press **Run workflow**. The workflow downloads Jonathan McDowell's maintained space-traveler and ride files and replaces `astronauts.json`. It also checks weekly.
